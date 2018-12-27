@@ -19,8 +19,8 @@
     <option value="wd3">
       Wingdings 3 (alpha)
     </option>
-    <option value="wbd" disabled="disabled">
-      Webdings (coming soon)
+    <option value="wbd">
+      Webdings (alpha)
     </option>
   </select>
   <div class="mdc-notched-outline">
@@ -35,6 +35,9 @@
 <button class="mdc-button mdc-button--outlined" id="btn-translate" accesskey="a" title="alt+a">
   <span class="mdc-button__label">Translate</span>
 </button>
+<button class="mdc-button mdc-button--outlined" id="btn-demo" accesskey="d" title="alt+d">
+  <span class="mdc-button__label">Demo</span>
+</button>
 <hr/>
 <div class="mdc-text-field mdc-text-field--textarea" id="input">
   <textarea id="textarea-i" class="mdc-text-field__input" rows="8" cols="40" required="required"></textarea>
@@ -46,7 +49,6 @@
     <div class="mdc-notched-outline__trailing"></div>
   </div>
 </div>
-
 <div class="mdc-text-field mdc-text-field--textarea" id="output">
   <textarea id="textarea-o" class="mdc-text-field__input" rows="8" cols="40" readonly="readonly"></textarea>
   <div class="mdc-notched-outline">
@@ -63,7 +65,8 @@
 <script src="main.js"></script>
 <script>
 //Attach MDCs
-mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
+mdc.ripple.MDCRipple.attachTo(document.querySelector('#btn-translate'));
+mdc.ripple.MDCRipple.attachTo(document.querySelector('#btn-demo'));
 mdc.textField.MDCTextField.attachTo(document.querySelector('#input'));
 mdc.textField.MDCTextField.attachTo(document.querySelector('#output'));
 mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
