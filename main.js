@@ -14,8 +14,15 @@ function translate(){
 	document.getElementById("talbl-f").innerHTML="Wingdings 2";
 	//20-2F start
 	o=o.replace(/ /g," ").replace(/!/g,"🖊").replace(/\"/g,"🖋").replace(/#/g,"🖌").replace(/\$/g,"🖍").replace(/%/g,"✄").replace(/&/g,"✀")
-       .replace(/\'/g,"🕾").replace(/\(/g,"🕽").replace(/\)/g,"🗅").replace(/\*/g,"🗆").replace(/\+/g,"🗇").replace(/\,/g,"🗈")
+	   .replace(/\'/g,"🕾").replace(/\(/g,"🕽").replace(/\)/g,"🗅").replace(/\*/g,"🗆").replace(/\+/g,"🗇").replace(/\,/g,"🗈")
 	   .replace(/-/g,"🗉").replace(/\./g,"🗊").replace(/\//g,"🗋");
+	//20-2F end
+	}else if(v=="wd3"){
+	document.getElementById("talbl-f").innerHTML="Wingdings 3";
+	//20-2F start
+	o=o.replace(/ /g," ").replace(/!/g,"⭠").replace(/\"/g,"⭢").replace(/#/g,"⭡").replace(/\$/g,"⭣").replace(/%/g,"⭦").replace(/&/g,"⭧")
+	   .replace(/\'/g,"⭩").replace(/\(/g,"⭨").replace(/\)/g,"⭰").replace(/\*/g,"⭲").replace(/\+/g,"⭱").replace(/\,/g,"⭳")
+	   .replace(/-/g,"⭶").replace(/\./g,"⭸").replace(/\//g,"⭻");
 	//20-2F end
 	}if(o==""){document.getElementById("textarea-i").focus();}else{document.getElementById("textarea-o").focus();}
 	document.getElementById("textarea-o").value=o;
