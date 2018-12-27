@@ -4,7 +4,7 @@ document.getElementById("btn-demo").addEventListener("click", demo);
 document.getElementById("ph").addEventListener("focus",function(){document.getElementById("wd-ver").focus();});
 function demo(){
 	document.getElementById("textarea-i").focus();
-	document.getElementById("textarea-i").value="! \" # $ % & ' ( ) * + , - . /\n0 1 2 3 4 5 6 7 8 9 : ; < = > ?\nA B C D E F G H I J K L M N O";
+	document.getElementById("textarea-i").value="! \" # $ % & ' ( ) * + , - . /\n0 1 2 3 4 5 6 7 8 9 : ; < = > ?\n@ A B C D E F G H I J K L M N O";
 	translate();
 }
 function translate(){
