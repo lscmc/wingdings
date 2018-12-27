@@ -4,7 +4,7 @@ document.getElementById("btn-demo").addEventListener("click", demo);
 document.getElementById("ph").addEventListener("focus",function(){document.getElementById("wd-ver").focus();});
 function demo(){
 	document.getElementById("textarea-i").focus();
-	document.getElementById("textarea-i").value="! \" # $ % & ' ( ) * + , - . /\n0 1 2 3 4 5 6 7 8 9 : ; < = > ?\n@ A B C D E F G H I J K L M N O";
+	document.getElementById("textarea-i").value="! \" # $ % & ' ( ) * + , - . /\n0 1 2 3 4 5 6 7 8 9 : ; < = > ?\n@ A B C D E F G H I J K L M N O\nP Q R S T U V W X Y Z [ \\ ] ^ _";
 	translate();
 }
 function translate(){
@@ -26,6 +26,11 @@ function translate(){
 	   .replace(/G/g,"☝").replace(/H/g,"☟").replace(/I/g,"🖐").replace(/J/g,"☺").replace(/K/g,"😐").replace(/L/g,"☹")
 	   .replace(/M/g,"💣").replace(/N/g,"☠").replace(/O/g,"🏳");
 	//40-4f end
+	//50-5f start
+	o=o.replace(/P/g,"🏱").replace(/Q/g,"✈").replace(/R/g,"☼").replace(/S/g,"💧").replace(/T/g,"❄").replace(/U/g,"🕆").replace(/V/g,"✞")
+	   .replace(/W/g,"🕈").replace(/X/g,"✠").replace(/Y/g,"✡").replace(/Z/g,"☪").replace(/\[/g,"☯").replace(/\\/g,"ॐ")
+	   .replace(/\]/g,"☸").replace(/\^/g,"♈").replace(/_/g,"♉");
+	//50-5f end
 	}else if(v=="wd2"){
 	document.getElementById("talbl-f").innerHTML="Wingdings 2";
 	//20-2F start
