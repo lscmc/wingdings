@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Wingdings translator</title>
+<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+</head>
+<body>
+<div class="mdc-select mdc-select--outlined">
+  <i class="mdc-select__dropdown-icon"></i>
+  <select class="mdc-select__native-control" id="wd-ver">
+    <option value="wd" selected="selected">
+      Wingdings (beta)
+    </option>
+    <option value="wd2">
+      Wingdings 2 (alpha)
+    </option>
+    <option value="wd3" disabled="disabled">
+      Wingdings 3 (coming soon)
+    </option>
+    <option value="wbd" disabled="disabled">
+      Webdings (coming soon)
+    </option>
+  </select>
+  <div class="mdc-notched-outline">
+  <div class="mdc-notched-outline__leading"></div>
+  <div class="mdc-notched-outline__notch">
+  <label class="mdc-floating-label">Version</label>
+  </div>
+  <div class="mdc-notched-outline__trailing"></div>
+  </div>
+  <div class="mdc-line-ripple"></div>
+</div>
+<button class="mdc-button mdc-button--outlined" id="btn-translate" accesskey="a" title="alt+a">
+  <span class="mdc-button__label">Translate</span>
+</button>
+<hr/>
+<div class="mdc-text-field mdc-text-field--textarea" id="input">
+  <textarea id="textarea-i" class="mdc-text-field__input" rows="8" cols="40" required="required"></textarea>
+  <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline__leading"></div>
+    <div class="mdc-notched-outline__notch">
+      <label for="textarea" class="mdc-floating-label">Original text (<span id="talbl-f">Wingdings</span>)</label>
+    </div>
+    <div class="mdc-notched-outline__trailing"></div>
+  </div>
+</div>
+
+<div class="mdc-text-field mdc-text-field--textarea" id="output">
+  <textarea id="textarea-o" class="mdc-text-field__input" rows="8" cols="40" readonly="readonly"></textarea>
+  <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline__leading"></div>
+    <div class="mdc-notched-outline__notch">
+      <label for="textarea" class="mdc-floating-label">Output (Unicode)</label>
+    </div>
+    <div class="mdc-notched-outline__trailing"></div>
+  </div>
+</div>
+<button id="ph" style="width:0;height:0;padding:0;border:0;"></button>
+
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<script src="main.js"></script>
+<script>
+//Attach MDCs
+mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
+mdc.textField.MDCTextField.attachTo(document.querySelector('#input'));
+mdc.textField.MDCTextField.attachTo(document.querySelector('#output'));
+mdc.select.MDCSelect.attachTo(document.querySelector('.mdc-select'));
+</script>
+</body>
+</html>
